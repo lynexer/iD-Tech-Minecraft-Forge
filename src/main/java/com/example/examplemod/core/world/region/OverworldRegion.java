@@ -22,7 +22,7 @@ public class OverworldRegion extends Region {
     @Override
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint,ResourceKey<Biome>>> mapper) {
         this.addModifiedVanillaOverworldBiomes(mapper, builder -> {
-            builder.replaceBiome(Biomes.DESERT, BiomeMod.TEST);
+            builder.replaceBiome(Biomes.DESERT, BiomeMod.TEST_KEY);
         });
     }
 }

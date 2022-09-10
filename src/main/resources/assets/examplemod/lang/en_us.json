@@ -1,0 +1,7 @@
+{
+  "key.category.examplemod.test": "Example Mod",
+  "key.examplemod.drink_water": "Drink Water",
+
+  "message.examplemod.drink_water": "Drinking Water",
+  "message.examplemod.no_water": "No water nearby!"
+}

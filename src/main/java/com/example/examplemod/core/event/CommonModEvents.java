@@ -1,17 +1,14 @@
 package com.example.examplemod.core.event;
 
 import com.example.examplemod.ExampleMod;
-import com.example.examplemod.common.entity.RaccoonEntity;
 import com.example.examplemod.common.thirst.PlayerThirst;
 import com.example.examplemod.common.thirst.PlayerThirstProvider;
-import com.example.examplemod.core.init.EntityMod;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.LogicalSide;
@@ -54,10 +51,5 @@ public class CommonModEvents {
                 }
             });
         }
-    }
-
-    @SubscribeEvent
-    public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
-        event.put(EntityMod.RACCOON.get(), RaccoonEntity.setAttributes());
     }
 }

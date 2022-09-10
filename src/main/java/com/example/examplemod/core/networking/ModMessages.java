@@ -1,6 +1,7 @@
 package com.example.examplemod.core.networking;
 
 import com.example.examplemod.ExampleMod;
+import com.example.examplemod.core.networking.packet.DrinkWaterC2SPacket;
 import com.example.examplemod.core.networking.packet.ExampleC2SPacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
@@ -31,6 +32,12 @@ public class ModMessages {
                 .decoder(ExampleC2SPacket::new)
                 .encoder(ExampleC2SPacket::toBytes)
                 .consumer(ExampleC2SPacket::handle)
+                .add();
+
+        net.messageBuilder(DrinkWaterC2SPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
+                .decoder(DrinkWaterC2SPacket::new)
+                .encoder(DrinkWaterC2SPacket::toBytes)
+                .consumer(DrinkWaterC2SPacket::handle)
                 .add();
     }
 
